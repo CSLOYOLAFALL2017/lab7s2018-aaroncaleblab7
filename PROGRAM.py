@@ -2,18 +2,17 @@
 # Parameters: None
 # Return: file name
 import os
-def filename(fileGiven):
+def filename():
     fileGiven = input( "Please enter a file name > " )
     while not os.path.exists( fileGiven):
-        fileGiven = input("Please enter a file name > ")
-    return(fileGiven)
-filename(fileGiven)
+         fileGiven = input("Please enter a file name > ")
+    return fileGiven
 # Function's purpose: Process the file
 # Parameters: file name of file to read from
 # Return: The maximum profit
-def maximum_profit (filename):
+def maximum_profit (fileGiven):
     maxProfit = 0
-    filename = open(filename,"r")
+    filename = open(fileGiven,"r")
     for line in filename:
         #print(line, end = "")
         movieData = line
@@ -44,9 +43,10 @@ def maximum_profit (filename):
 # Parameters: None
 # Return: None
 def main():
-
-    maximum_profit(filename)
+    fileInput = filename()
+    maximum_profit(fileInput)
 #
 # print("Filename", filename,"exists")
 #
 # output_filename = input("Please enter the output file name > ")
+main()
