@@ -9,6 +9,7 @@
 #Parameters: file name of file to read from
 #Return: The maximum profit
 
+WANT TO SUBTRACT BUDGET FROM GROSS INCOME
 
 
 
